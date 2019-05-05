@@ -6,6 +6,8 @@
 
 * [markdown使用手册](markdown/markdown使用手册.md)
 
+* [git使用手册](git/git.md)
+
   
 
   
