@@ -24,6 +24,7 @@
   * [3.单位详细说明](./reactNative/单位详细说明.md)
   * [4.使用规范](./reactNative/使用规范.md)
   * [5.路由](./reactNative/navigation.md)
+  * [6.全量更新](./reactNative/全量更新.md)
 * 面试题
   * javascript
     * [JS有几种方法实现数组去重](./interview/javascript/JS有几种方法实现数组去重.md)
