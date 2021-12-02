@@ -1,7 +1,7 @@
 <!--
  * @Author: hf
  * @Date: 2020-10-21 14:12:43
- * @LastEditTime: 2021-12-02 15:44:22
+ * @LastEditTime: 2021-12-02 16:37:32
  * @LastEditors: hf
 -->
 # Summary
@@ -24,12 +24,6 @@
   * [3.单位详细说明](./reactNative/单位详细说明.md)
   * [4.使用规范](./reactNative/使用规范.md)
   * [5.路由](./reactNative/navigation.md)
-* android
-  * [1.安卓环境搭建](./android/安卓环境搭建.md)
-* ios
-  * [1.ios环境搭建](./ios/ios环境搭建.md)
-* 移动端
-  * [1.移动端总结](./mobile/mobile.md)
 * 面试题
   * javascript
     * [JS有几种方法实现数组去重](./interview/javascript/JS有几种方法实现数组去重.md)
@@ -39,11 +33,17 @@
   * [javascript](./interview/javascript.md)
   * [移动端](./interview/移动端.md)
   * [文件上传下载](./interview/文件上传下载.md)
+  * [面试题汇总](./interview/面试题汇总.md)
 * 国学
   * [千字文](./Chinese/千字文.md)
 * 英语
   * [每日一句](./English/每日一句.md)
 * 多语言方案
   * [多语言方案](./多语言方案/lang.md)
-
+* android
+  * [1.安卓环境搭建](./android/安卓环境搭建.md)
+* ios
+  * [1.ios环境搭建](./ios/ios环境搭建.md)
+* 移动端
+  * [1.移动端总结](./mobile/mobile.md)
 
