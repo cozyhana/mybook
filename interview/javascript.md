@@ -1,7 +1,7 @@
 <!--
  * @Author: hf
  * @Date: 2021-09-13 14:51:25
- * @LastEditTime: 2021-09-15 16:55:14
+ * @LastEditTime: 2021-12-02 15:41:52
  * @LastEditors: hf
 -->
 ### 1. 手写call,apply和bind 函数
@@ -113,6 +113,6 @@ bind 函数：
 
 ### 6.JS有几种方法判断变量的类型？
 
-### 7.JS有几种方法实现数组去重？
+
 
 

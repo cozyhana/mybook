@@ -1,7 +1,7 @@
 <!--
  * @Author: hf
  * @Date: 2020-10-21 14:12:43
- * @LastEditTime: 2021-10-09 17:11:52
+ * @LastEditTime: 2021-12-02 15:44:22
  * @LastEditors: hf
 -->
 # Summary
@@ -31,16 +31,19 @@
 * 移动端
   * [1.移动端总结](./mobile/mobile.md)
 * 面试题
+  * javascript
+    * [JS有几种方法实现数组去重](./interview/javascript/JS有几种方法实现数组去重.md)
   * [react](./interview/react.md)
   * [web安全](./interview/web安全.md)
   * [html](./interview/html.md)
   * [javascript](./interview/javascript.md)
   * [移动端](./interview/移动端.md)
+  * [文件上传下载](./interview/文件上传下载.md)
 * 国学
   * [千字文](./Chinese/千字文.md)
 * 英语
   * [每日一句](./English/每日一句.md)
 * 多语言方案
   * [多语言方案](./多语言方案/lang.md)
-  
+
 
