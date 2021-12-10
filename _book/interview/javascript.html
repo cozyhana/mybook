@@ -720,9 +720,10 @@
                                 <!--
  * @Author: hf
  * @Date: 2021-09-13 14:51:25
- * @LastEditTime: 2021-12-02 15:41:52
+ * @LastEditTime: 2021-12-10 14:47:38
  * @LastEditors: hf
 -->
+<p><a href="#1-&#x624B;&#x5199;callapply&#x548C;bind-&#x51FD;&#x6570;">1.&#x624B;&#x5199;callapply&#x548C;bind-&#x51FD;&#x6570;</a><br><a href="#2-&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">2.&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</a><br><a href="#5-commonjs&#x548C;es6-&#x4E2D;&#x6A21;&#x5757;&#x5F15;&#x5165;&#x7684;&#x533A;&#x522B;&#xFF1F;">5.common.js&#x548C;ES6 &#x4E2D;&#x6A21;&#x5757;&#x5F15;&#x5165;&#x7684;&#x533A;&#x522B;&#xFF1F;</a><br><a href="#6-js&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF1F;">6.JS&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF1F;</a> </p>
 <h3 id="1-&#x624B;&#x5199;callapply&#x548C;bind-&#x51FD;&#x6570;">1. &#x624B;&#x5199;call,apply&#x548C;bind &#x51FD;&#x6570;</h3>
 <p> call &#x51FD;&#x6570;&#xFF1A;</p>
 <pre><code>     Function.prototype.mycall = function (context) {
@@ -828,8 +829,25 @@ use strict &#x662F;&#x4E00;&#x79CD;ECMAscript&#x6DFB;&#x52A0;&#x7684;&#xFF08;&#x
 <li>commonJS&#x7684;this&#x662F;&#x6307;&#x5411;&#x5F53;&#x524D;&#x6A21;&#x5757;&#xFF0C;ES6 Module&#x7684;this&#x662F;undefined&#x3002;</li>
 </ul>
 </blockquote>
-<h3 id="6js&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF1F;">6.JS&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF1F;</h3>
-
+<h3 id="6-js&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF1F;">6. JS&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF1F;</h3>
+<pre><code>0. &#x6570;&#x636E;&#x7C7B;&#x578B;
+   1. 6&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#xFF09;
+      1. String
+      2. Number
+      3. Boolean
+      4. Undefined
+      5. Null
+      6. Symbol
+   2. &#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B; Object
+1. &#x4F7F;&#x7528; typeof &#x64CD;&#x4F5C;&#x7B26; &#x68C0;&#x6D4B;
+   1. &#x5BF9;&#x539F;&#x59CB;&#x503C;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x4F46;&#x5BF9;&#x5F15;&#x7528;&#x503C;&#x6CA1;&#x4EC0;&#x4E48;&#x7528;
+   2. typeof &#x662F;&#x64CD;&#x4F5C;&#x7B26;&#x4E0D;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x6CA1;&#x6709;&#x53C2;&#x6570;
+      eg. typeof 1 // number 
+2. &#x4F7F;&#x7528; instanceof &#x68C0;&#x6D4B;
+   1. &#x68C0;&#x6D4B;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;
+      eg. colors instanceof Array // &#x53D8;&#x91CF;&#x662F;Array&#x5417;&#xFF1F;
+3. &#x4F7F;&#x7528;constructor&#x68C0;&#x6D4B;
+</code></pre>
                                 
                                 </section>
                             
@@ -872,7 +890,7 @@ use strict &#x662F;&#x4E00;&#x79CD;ECMAscript&#x6DFB;&#x52A0;&#x7684;&#xFF08;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"javascript","level":"1.4.5","depth":2,"next":{"title":"移动端","level":"1.4.6","depth":2,"path":"interview/移动端.md","ref":"./interview/移动端.md","articles":[]},"previous":{"title":"html","level":"1.4.4","depth":2,"path":"interview/html.md","ref":"./interview/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"interview/javascript.md","mtime":"2021-12-02T07:43:24.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-10T03:13:23.174Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"javascript","level":"1.4.5","depth":2,"next":{"title":"移动端","level":"1.4.6","depth":2,"path":"interview/移动端.md","ref":"./interview/移动端.md","articles":[]},"previous":{"title":"html","level":"1.4.4","depth":2,"path":"interview/html.md","ref":"./interview/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"interview/javascript.md","mtime":"2021-12-10T06:47:38.674Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-10T03:13:23.174Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
