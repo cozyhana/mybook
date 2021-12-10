@@ -1,10 +1,20 @@
 <!--
  * @Author: hf
  * @Date: 2021-12-02 15:43:11
- * @LastEditTime: 2021-12-02 15:55:06
+ * @LastEditTime: 2021-12-10 13:14:28
  * @LastEditors: hf
 -->
 ### JS有几种方法实现数组去重？
+
+[1. 对象函数](#1-对象函数)   
+[2. 遍历数组法](#2-遍历数组法)      
+[3-数组下标判断法](#3-数组下标判断法)   
+[4-排序后相邻去除法](#4-排序后相邻去除法)   
+[5-元素对比法](#5-元素对比法)    
+[6-使用数组中的filter方法](#6-使用数组中的filter方法)  
+[7-set去重法](#7-set去重法)    
+[8-使用arrayfrom方法](#8-使用arrayfrom方法) 
+    
 #### 1. 对象函数   
 ```
 function arrayNoRepeat(arr){
@@ -122,3 +132,4 @@ function unique(arr){
 ```
 
 2-8 转载 https://www.cnblogs.com/abc-x/p/13371053.html?ivk_sa=1024320u
+[回到顶部](#1-对象函数)
