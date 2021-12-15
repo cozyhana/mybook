@@ -609,6 +609,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.10.2" data-path="../mobile/androidIos.html">
+            
+                <a href="../mobile/androidIos.html">
+            
+                    
+                    2.H5移动端ios/Android兼容性总结
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -720,14 +733,40 @@
                                 <!--
  * @Author: hf
  * @Date: 2021-12-02 15:02:19
- * @LastEditTime: 2021-12-10 13:15:36
+ * @LastEditTime: 2021-12-15 14:40:29
  * @LastEditors: hf
 -->
 <p><a href="#1-file-api-&#x548C;-blob-api-&#x7EA2;&#x5B9D;&#x4E66;&#x7B2C;&#x56DB;&#x7248;204">1-file-api-&#x548C;-blob-api-&#x7EA2;&#x5B9D;&#x4E66;&#x7B2C;&#x56DB;&#x7248;204</a><br><a href="#2-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;">2-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;</a><br><a href="#3-&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;">3-&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;</a></p>
 <h3 id="1-file-api-&#x548C;-blob-api-&#xFF08;&#x7EA2;&#x5B9D;&#x4E66;&#x7B2C;&#x56DB;&#x7248;204&#xFF09;">1. File API &#x548C; Blob API &#xFF08;&#x7EA2;&#x5B9D;&#x4E66;&#x7B2C;&#x56DB;&#x7248;20.4&#xFF09;</h3>
 <h3 id="2-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;">2. &#x6587;&#x4EF6;&#x4E0A;&#x4F20;</h3>
 <h3 id="3-&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;">3. &#x6587;&#x4EF6;&#x4E0B;&#x8F7D;</h3>
-
+<p> <code>fe.js</code></p>
+<pre><code>export const getRequest = (method, params, success = () =&gt; {}, fail = () =&gt; {}) =&gt; {
+  let opts = requestConfig
+  let config = {
+    headers: {
+      token: opts.token ,
+      orgCode: opts.orgcode ,
+    },
+    responseType: &apos;blob&apos;,
+  }
+  let ajaxObj = axios.get(`${method}`, config)
+  ajaxObj.then((res) =&gt; {
+    console.log(res)
+    let blob = new Blob([res.data], {
+      type: &apos;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&apos;,
+    })
+    let objUrl = window.URL.createObjectURL(blob)
+    let a = document.createElement(&apos;a&apos;)
+    a.href = objUrl
+    a.download = &apos;&#x540D;&#x5B57;&apos;
+    a.dispatchEvent(new MouseEvent(&apos;click&apos;, { bubbles: true, cancelable: true, view: window }))
+    window.URL.revokeObjectURL(blob)
+  })
+}
+</code></pre><p><code>be.js //node</code></p>
+<pre><code>  response.setHeader(&apos;Content-Disposition&apos;, &apos;attachment;filename=12.xlsx&apos;)
+</code></pre>
                                 
                                 </section>
                             
@@ -770,7 +809,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文件上传下载","level":"1.4.7","depth":2,"next":{"title":"面试题汇总","level":"1.4.8","depth":2,"path":"interview/面试题汇总.md","ref":"./interview/面试题汇总.md","articles":[]},"previous":{"title":"移动端","level":"1.4.6","depth":2,"path":"interview/移动端.md","ref":"./interview/移动端.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"interview/文件上传下载.md","mtime":"2021-12-10T05:27:41.714Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-10T03:13:23.174Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文件上传下载","level":"1.4.7","depth":2,"next":{"title":"面试题汇总","level":"1.4.8","depth":2,"path":"interview/面试题汇总.md","ref":"./interview/面试题汇总.md","articles":[]},"previous":{"title":"移动端","level":"1.4.6","depth":2,"path":"interview/移动端.md","ref":"./interview/移动端.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"interview/文件上传下载.md","mtime":"2021-12-15T06:40:38.935Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-15T03:04:23.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
