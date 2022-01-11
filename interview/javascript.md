@@ -1,7 +1,7 @@
 <!--
  * @Author: hf
  * @Date: 2021-09-13 14:51:25
- * @LastEditTime: 2021-12-10 14:47:38
+ * @LastEditTime: 2022-01-06 14:35:23
  * @LastEditors: hf
 -->
 [1.手写callapply和bind-函数](#1-手写callapply和bind-函数)     
@@ -135,6 +135,12 @@ bind 函数：
        1. 检测具体类型的对象
           eg. colors instanceof Array // 变量是Array吗？
     3. 使用constructor检测
+    4.  Object.prototype.toString.call(val).slice(8, -1).toLowerCase();  
+
+        const typeCheck = (val) => {
+            let type = Object.prototype.toString.call(val).slice(8, -1).toLowerCase();
+            return type;
+        };
 
 
 
