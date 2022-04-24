@@ -1,7 +1,7 @@
 <!--
  * @Author: hf
  * @Date: 2020-10-21 14:12:43
- * @LastEditTime: 2022-01-07 10:40:27
+ * @LastEditTime: 2022-02-25 11:11:35
  * @LastEditors: hf
 -->
 # Summary
@@ -28,7 +28,8 @@
 * 面试题
   * javascript
     * [JS有几种方法实现数组去重](./interview/javascript/JS有几种方法实现数组去重.md)
-  * [react](./interview/react.md)
+  * [react](./interview/React/react.md)
+    * [setState](./interview/React/setState.md)
   * [web安全](./interview/web安全.md)
   * [html](./interview/html.md)
   * [javascript](./interview/javascript.md)

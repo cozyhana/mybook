@@ -143,5 +143,50 @@ bind 函数：
         };
 
 
+### 防抖和节流
+
+  ```
+        /**
+        * 1.防抖函数:就是指触发事件后在n秒内，函数只能执行一次，如果在n秒内又触发了事件，则会重新计算函数执行时间
+        * 如果你一直猛触发 就不给你执行了
+        * @param {*func} fn
+        * @param {*number} wait
+        * @returns
+        */
+        function debounce(fn, wait) {
+        let timer = null;
+        return () => {
+            const args = arguments;
+            const now = !timer;
+            if (timer) {
+            clearTimeout(timer);
+            }
+            timer = setTimeout(() => {
+            timer = null;
+            }, wait);
+            if (now) {
+            fn.apply(this, args);
+            }
+        };
+        }
+
+        /**
+        * 2.节流函数:就是指连续触发事件但是在一段时间中只执行一次函数
+        * @param {*func} fn
+        * @param {*number} wait
+        * @returns
+        */
+        function throttle(fn, wait) {
+        let last = 0;
+        return () => {
+            const args = arguments;
+            const now = Date.now();
+            if (now - last >= wait) {
+            fn.apply(this, args);
+            last = Date.now();
+            }
+        };
+        }
+  ```
 
 
