@@ -3,5 +3,5 @@
 "editor.tabSize": 4,
 "editor.formatOnPaste": true,
 "editor.formatOnSave": true,
-"svn.ignoreMissingSvnWarning": true
+"svn.ignoreMissingSvnWarning": true  
 }
